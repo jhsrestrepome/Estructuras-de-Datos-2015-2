@@ -1,8 +1,12 @@
 
 public class Figuras {
 
-	private String nombre = "figuras";
-	
+	protected String nombre;
+
+	public Figuras(){
+		super();
+		this.nombre = "figura";
+	}
 	
 	public Figuras(String nombre) {
 		super();
@@ -21,6 +25,7 @@ public class Figuras {
 	public String toString() {
 		return "Figuras [nombre=" + nombre + "]";
 	}
+	
 
 	
 	

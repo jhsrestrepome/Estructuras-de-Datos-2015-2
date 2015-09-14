@@ -1,18 +1,28 @@
 
 public class Triangulo extends Figuras {
 
-	private double alto=1;
-	private double base=1;
-	public Triangulo(String nombre) {
-		super(nombre);
-		super.setNombre("Triangulo");
+	private float alto;
+	private float base;
+	
+	public Triangulo(){
+		super();
+		this.nombre = "Triangulo";
+		this.alto = 1;
+		this.base = 1;
+	}
+	
+	public Triangulo(String nombre, float alto, float base) {
+		super();
+		this.nombre = nombre;
+		this.alto = alto;
+		this.base = base;
 	}	
 	
 	public double getAlto() {
 		return alto;
 	}
 	
-	public void setAlto(double alto) {
+	public void setAlto(float alto) {
 		if(alto>0 && alto <21){
 			this.alto = alto;			
 		}else{
@@ -24,7 +34,7 @@ public class Triangulo extends Figuras {
 		return base;
 	}
 
-	public void setBase(double base) {
+	public void setBase(float base) {
 		if(base>0 && base<21){
 			this.base = base;
 		}else{
@@ -42,6 +52,9 @@ public class Triangulo extends Figuras {
 
 	@Override
 	public String toString() {
-		return "Triangulo [alto=" + alto + ", base=" + base + "]";
+		return "Triangulo [nombre="+ nombre + ", alto=" + alto + ", base=" + base + ", área=" + areaTriangulo() + ", perímetro=" + perimetroTriangulo() +"]";
 	}	
+	
+	
+	
 }

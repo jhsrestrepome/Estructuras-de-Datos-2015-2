@@ -2,18 +2,26 @@
 
 public class Circulo extends Figuras{
 
-	private double radio = 1;	
+	
+	private float radio;	
+	
+	public Circulo(){
+		super();
+		this.nombre = "Circulo";
+		this.radio = 1;
+	}
 
-	public Circulo(String nombre) {
-		super(nombre);
-		super.setNombre("Circulo");
+	public Circulo(String nombre, float radio) {
+		super();
+		this.nombre = nombre;
+		this.radio = radio;
 	}
 
 	public double getRadio() {
 		return radio;
 	}
 
-	public void setRadio(double radio) {
+	public void setRadio(float radio) {
 		if(radio>0 && radio<21){
 			this.radio = radio;
 		}else{
@@ -32,7 +40,7 @@ public class Circulo extends Figuras{
 
 	@Override
 	public String toString() {
-		return "Circulo [radio=" + radio + "]";
+		return "Circulo [nombre="+ nombre + ", radio=" + radio + ", área=" + areaCirculo() + ", perímetro=" + perimetroCirculo() +"]";
 	}	
 	
 }

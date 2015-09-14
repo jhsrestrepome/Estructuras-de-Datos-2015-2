@@ -1,20 +1,27 @@
 
 public class Rectangulo extends Figuras {
 
-	private double alto = 1;
-	private double largo = 1;
+	private float alto;
+	private float largo;
 		
-		
-	public Rectangulo(String nombre) {
-		super(nombre);
-		super.setNombre("Rectangulo");
+	public Rectangulo() {
+		super();
+		this.nombre = "Rectangulo";
+		this.alto = 1;
+		this.largo = 1;
 	}
-
+	
+	public Rectangulo(String nombre, float alto, float largo) {
+		super();
+		this.nombre = nombre;
+		this.alto = alto;
+		this.largo = largo;
+	}
 	public double getAlto() {
 		return alto;
 	}
 	
-	public void setAlto(double alto) {
+	public void setAlto(float alto) {
 		if(alto>0 && alto<21){
 			this.alto = alto;
 		}else {
@@ -26,7 +33,7 @@ public class Rectangulo extends Figuras {
 		return largo;
 	}
 	
-	public void setLargo(double largo) {
+	public void setLargo(float largo) {
 		if(largo>0 && largo <21){
 			this.largo = largo;
 		}else {
@@ -48,7 +55,7 @@ public class Rectangulo extends Figuras {
 	
 	@Override
 	public String toString() {
-		return "Rectangulo [alto=" + alto + ", largo=" + largo + "]";
+		return "Rectangulo [nombre="+ nombre + ", alto=" + alto + ", largo=" + largo + ", área=" + areaRectangulo() + ", perímetro=" + perimetroRectangulo() +"]";
 	}	
 	
 }
