@@ -81,6 +81,7 @@ public class Main {
 		for(int k=1; k<4; k++){
 			for (int i = 0; i <= 4; i++) {
 	            System.out.println(area.get(i*k));
+	            System.out.println(perimetro.get(i*k));
 			}
 			System.out.println("////////");
 		}
