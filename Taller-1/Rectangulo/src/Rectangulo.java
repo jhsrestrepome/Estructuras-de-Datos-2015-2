@@ -8,6 +8,7 @@ public class Rectangulo {
 	public double getAlto() {
 		return alto;
 	}
+	
 	public void setAlto(double alto) {
 		if(alto>0 && alto<21){
 			this.alto = alto;
@@ -15,6 +16,7 @@ public class Rectangulo {
 			this.alto=0;
 		}		
 	}
+	
 	public double getLargo() {
 		return largo;
 	}
