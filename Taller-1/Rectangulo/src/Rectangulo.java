@@ -1,36 +1,36 @@
 
 public class Rectangulo {
 
-	private int alto = 1;
-	private int largo = 1;
+	private double alto = 1;
+	private double largo = 1;
 	
 	
-	public int getAlto() {
+	public double getAlto() {
 		return alto;
 	}
-	public void setAlto(int alto) {
-		if(alto>1 && alto<20){
+	public void setAlto(double alto) {
+		if(alto>0 && alto<21){
 			this.alto = alto;
 		}else {
 			this.alto=0;
 		}		
 	}
-	public int getLargo() {
+	public double getLargo() {
 		return largo;
 	}
-	public void setLargo(int largo) {
-		if(largo>1 && largo <20){
+	public void setLargo(double largo) {
+		if(largo>0 && largo <21){
 			this.largo = largo;
 		}else {
 			this.largo = 0;
 		}
 	}
 	
-	public int areaRectangulo (){
+	public double areaRectangulo (){
 		return this.alto*this.largo;		
 	}
 	
-	public int perimetroRectangulo(){
+	public double perimetroRectangulo(){
 		if(this.alto==0 || this.largo==0 ){
 			return 0;
 		}else {
